@@ -1,4 +1,4 @@
-def binarySearch(arr,key,left,right):
+def binarySearch(arr,key,left,right):            
     if left>right:
         return -1
     else:
