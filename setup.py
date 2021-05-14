@@ -12,7 +12,7 @@ setup(
     name= 'DSA_in_Python', 
     version='0.0.1',
     description='Contains useful functions', 
-    Long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG. txt').read(),
+    Long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
     url='',
     author='Armaan Chauhan',
     author_email='armaanchauhan268@gmail.com',
