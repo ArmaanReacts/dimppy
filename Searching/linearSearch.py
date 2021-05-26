@@ -1,4 +1,4 @@
-def linearSearch(arr,key):
+def search(arr,key):
     length = len(arr)
     index = 0
     while index<length:
@@ -10,4 +10,4 @@ def linearSearch(arr,key):
 if __name__ == "__main__":
     a = eval(input('Array: '))
     k = int(input('Search for: '))
-    print("Found at:",linearSearch(a,k))
+    print("Found at:",search(a,k))

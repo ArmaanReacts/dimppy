@@ -1,4 +1,4 @@
-def binarySearch(arr,key):
+def search(arr,key):
     left = 0
     right = len(arr)-1
     while left<=right:
@@ -15,4 +15,4 @@ if __name__ == "__main__":
     a = eval(input('Array: '))
     a.sort()
     k = int(input('Search for: '))
-    print("Found at:",binarySearch(a,k))
+    print("Found at:",search(a,k))
