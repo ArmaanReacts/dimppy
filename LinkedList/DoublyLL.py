@@ -14,6 +14,9 @@ class LinkedList:
     # Size of linkedlist
     def __len__(self):
         return self._size
+    # Print Queue using print function
+    def __str__(self):
+        self.display()
     # Check if list is empty
     def isEmpty(self):
         return self._size == 0
@@ -125,7 +128,7 @@ class LinkedList:
         return e 
 
     # Remove a node from a particular position
-    def removePos(self,position):  # sourcery skip
+    def removePos(self,position):  
         if position == 0:
             self.removeFirst()
         elif position == len(self)-1:
