@@ -1,6 +1,59 @@
-import sys
-sys.path.append('D:\\0_Work\\dsaInPython\\DSAinPython')
-from Queue.ArrQueue import Queue 
+class Queue:
+    def __init__(self,N = 'inf'):
+        self._data = [] 
+        self._N = N  
+
+    # Size of Queue
+    def __len__(self):
+        return len(self._data)
+    # Print Queue using print function
+    def __str__(self):
+        if self.isEmpty():
+            return "Queue is Empty!"
+        s = ""
+        for i in self._data:
+            s += str(i) + " "
+        return s
+    # Check if Queue is empty
+    def isEmpty(self):
+        return len(self._data) == 0
+    # Check if Queue is full
+    def isFull(self):
+        return len(self._data) == self._N
+
+    # Insert an element to the Queue
+    def enqueue(self,e):
+        if self.isFull():
+            print("Queue is Full!")
+            return
+        else:
+            self._data.append(e)
+
+    # Remove an element out of the Queue
+    def dequeue(self):
+        if self.isEmpty():
+            print("Queue is Empty!")
+            return
+        else:
+            return self._data.pop(0)
+
+    # Return first element of the Queue
+    def first(self):
+        if self.isEmpty():
+            print("Queue is Empty!")
+            return
+        else:
+            return self._data[0]
+    
+    # Display the Queue
+    def display(self):
+        for i in self._data:
+            print(i,"|",end=" ")
+        print()
+    
+    # Delete the Queue
+    def clear(self):
+        self._data = []
 class _Node:
     __slots__='_element','_left','_right'
 
@@ -9,7 +62,7 @@ class _Node:
         self._left = left
         self._right = right
 
-class BinaryTree:
+class Tree:
     def __init__(self):
         self._root = None
 
@@ -66,13 +119,13 @@ class BinaryTree:
         h = self.calHeight(tRoot)
         return h-1
 if __name__ == '__main__':
-    x = BinaryTree()
-    y = BinaryTree()
-    z = BinaryTree()
-    r = BinaryTree()
-    s = BinaryTree()
-    t = BinaryTree()
-    a = BinaryTree()
+    x = Tree()
+    y = Tree()
+    z = Tree()
+    r = Tree()
+    s = Tree()
+    t = Tree()
+    a = Tree()
     x.makeTree(40,a,a)
     y.makeTree(60,a,a)
     z.makeTree(20,x,a)
