@@ -15,7 +15,14 @@ class LinkedList:
         return self._size
     # Print Queue using print function
     def __str__(self):
-        self.display()
+        if self.isEmpty():
+            return "List is Empty!!"
+        s = str(self._head._element)+" "
+        p = self._head._next
+        while p !=self._head:
+            s = s+ str(p._element)+" "
+            p = p._next
+        return s
     # Check if list is empty
     def isEmpty(self):
         return self._size == 0
@@ -180,6 +187,7 @@ if __name__ == '__main__':
     L.addLast(5)
     L.addLast(12)
     L.addPos(9,0)
+    print(L)
     L.display()
 
     L.removeVal(9)
