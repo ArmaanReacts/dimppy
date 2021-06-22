@@ -2,6 +2,7 @@ def search(arr,key):
     left = 0
     right = len(arr)-1
     while left<=right:
+        print("iter")
         mid = (left+right)//2
         if arr[mid]==key:
             return mid
